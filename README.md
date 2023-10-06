@@ -1,17 +1,23 @@
 
-# blog_explorer
 
-A new Flutter project.
+#Step-1:
+        Download flutter sdk by following rules at
+                  (https://docs.flutter.dev/get-started/install)
 
-## Getting Started
+#Step-2:
+        Setup the flutter project in android studio by installing all necessary plugins
+        and setting paths in environment variables of system
 
-This project is a starting point for a Flutter application.
+#Step-3:
+        provide flutter sdk path in Android studio settings
 
-A few resources to get you started if this is your first Flutter project:
+#Step-4:
+        Now connect device to system using cable and select the device in list of devices and
+        run the project by clicking keys (Shift + F10)
+                                    (or)
+        Open the project folder in command prompt and run the project using command 
+        ("flutter run") and select the device
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Step-5:
+        Now, the app is ready to use in device
+                        
