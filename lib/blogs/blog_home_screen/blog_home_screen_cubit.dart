@@ -41,7 +41,7 @@ class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
     }
   }
 
-  void addFavourite(String postId) {
+  void toggleLike(String postId) {
     final initialState = state;
     if (initialState is _Data<List<Blogs>>) {
       final likedBlogs = initialState.data
