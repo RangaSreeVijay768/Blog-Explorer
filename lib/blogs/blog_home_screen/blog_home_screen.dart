@@ -1,3 +1,4 @@
+import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_initial/blog_home_screen_initial.dart';
 import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_internet_error/blog_home_screen_internet_error.dart';
 import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_server_error/blog_home_screen_server_error.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
@@ -60,31 +61,7 @@ class BlogHomeScreen extends BaseStatelessWidget<BlogHomeScreenController, BlogH
                         fit: BoxFit.fill)),
                 child: Center(
                   child: state.when(
-                      initial: () => Center(
-                          child: Container(
-                            width: 230,
-                            padding: edge_insets_y_24,
-                            decoration: BoxDecoration(
-                                boxShadow: const [shadows.bs_primary],
-                                color: AppColors.white,
-                                borderRadius: borderRadius.br_10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                LoadingAnimationWidget.discreteCircle(
-                                    color: AppColors.bgPrimary,
-                                    size: 50,
-                                    secondRingColor: AppColors.bmiTracker,
-                                    thirdRingColor:
-                                    AppColors.waterPrimary),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                const Text(
-                                    "Please wait\nwhile loading....")
-                              ],
-                            ),
-                          )),
+                      initial: () => BlogHomeScreenInitial(),
                       error: () => BlogHomeScreenInternetError(),
                       apiError: () => BlogHomeScreenServerError(),
                       data: (blogs) => ListView.builder(
