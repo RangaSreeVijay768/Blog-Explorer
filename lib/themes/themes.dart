@@ -10,5 +10,5 @@ abstract class Themes {
       colorScheme: const ColorScheme.light(
         primary: AppColors.bgPrimary,
       ),
-      textTheme: Typography().black.apply(fontFamily: Fonts.fontNunito));
+  );
 }

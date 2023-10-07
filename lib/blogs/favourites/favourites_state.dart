@@ -1,6 +1,6 @@
 part of 'favourites_cubit.dart';
 
 @freezed
-class FavouritesState with _$FavouritesState {
-  const factory FavouritesState.initial({required bool isLiked}) = _Initial;
+class FavouritesState<T> with _$FavouritesState<T> {
+  const factory FavouritesState.initial() = _Initial;
 }

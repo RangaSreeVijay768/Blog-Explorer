@@ -81,7 +81,6 @@ class OnboardingWelcomeScreen extends BaseStatelessWidget<OnboardingWelcomeScree
                                   style: TextStyle(
                                     color: AppColors.textHeading,
                                     fontSize: Fonts.fontSize24,
-                                    fontFamily: Fonts.fontNunito,
                                     fontWeight: Fonts.f700,
                                   ),
                                 ),
@@ -93,7 +92,6 @@ class OnboardingWelcomeScreen extends BaseStatelessWidget<OnboardingWelcomeScree
                                   style: TextStyle(
                                     color: AppColors.grey2,
                                     fontSize: Fonts.fontSize14,
-                                    fontFamily: Fonts.fontNunito,
                                     fontWeight: Fonts.f400,
                                   ),
                                 ),
@@ -114,7 +112,6 @@ class OnboardingWelcomeScreen extends BaseStatelessWidget<OnboardingWelcomeScree
                                     "Explore",
                                     style: TextStyle(
                                       color: AppColors.bgPrimary,
-                                      fontFamily: Fonts.fontNunito,
                                       fontSize: Fonts.fontSize18,
                                       fontWeight: Fonts.f700,
                                     ),

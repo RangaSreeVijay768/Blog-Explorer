@@ -1,54 +1,34 @@
+import 'package:blog_explorer/blogs/favourites/favourites_controller.dart';
+import 'package:blog_explorer/blogs/favourites/favourites_cubit.dart';
+import 'package:blog_explorer/core/widgets/base_stateless_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../blogs_model/blogs_model.dart';
-import 'favourites_controller.dart';
-import 'favourites_cubit.dart';
+class FavouritesScreen extends BaseStatelessWidget<FavouritesController, FavouritesCubit>{
+  final String id;
+  final String title;
+  final String image;
+  const FavouritesScreen(this.id, this.title, this.image, {super.key});
 
-
-
-class FavouritesPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider<FavouritesCubit>(
-        create: (context) => FavouritesCubit(),
-        child: BlocBuilder<FavouritesCubit, List<Blogs>>(
-          builder: (context, favorites) {
-            return Scaffold(
-              appBar: AppBar(
-                actions: [
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.red
-                    ),
-                      onPressed: (){
-                        // Navigator.of(context).push(MaterialPageRoute(builder: (context) => WebViewApp()));
-                      },
-                      child: Text("Web view")
-                  ),
-                ],
-              ),
-              body: ListView.builder(
-                itemCount: favorites.length,
-                itemBuilder: (context, index) {
-                  // final favorite = favorites[index];
-                  return ListTile(
-                    title: Text('ertyuio', style: TextStyle(color: Colors.red),),
-                    trailing: IconButton(
-                      icon: Icon(Icons.delete),
-                      onPressed: () {
-                        // context.read<FavouritesCubit>().removeFavorite(favorite);
-                      },
-                    ),
-                  );
-                },
-              ),
-            );
-          },
-        ),
-      ),
+    return BlocProvider<FavouritesCubit>(
+        create: (context) => createCubitAndAssignToController(context),
+      child: BlocConsumer<FavouritesCubit, FavouritesState>(
+        listener: (context, state){},
+        builder: (context, state){
+          return const Scaffold();
+        },
+      )
     );
+  }
+
+  @override
+  FavouritesCubit createCubitAndAssignToController(BuildContext context) {
+    FavouritesCubit favouritesCubit = FavouritesCubit();
+    controller?.cubit = favouritesCubit;
+    return favouritesCubit;
   }
 
 }

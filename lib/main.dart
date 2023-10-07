@@ -1,4 +1,3 @@
-import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen.dart';
 import 'package:blog_explorer/onboarding/onboarding_welcome_screen/onboarding_welcome_screen.dart';
 import 'package:blog_explorer/themes/themes.dart';
 import 'package:flutter/material.dart';

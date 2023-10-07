@@ -22,7 +22,7 @@ abstract class borders {
   static Border b_1px_grey2 = Border.all(color: AppColors.grey2, width: 1);
   static Border b_1px_green = Border.all(color: AppColors.green , width: 1);
   static Border b_3px_green = Border.all(color: AppColors.green , width: 3);
-  static Border b_5px_rainbow = Border.all(color: AppColors.rainbow7 , width: 2);
+  static Border b_5px_rainbow = Border.all(color: AppColors.rainbow3 , width: 2);
   static Border b_1px_bgPrimary = Border.all(color: AppColors.bgPrimary, width: 1);
   static Border b_1px_bgLightBlue = Border.all(color: AppColors.bgLightBlue, width: 1);
 

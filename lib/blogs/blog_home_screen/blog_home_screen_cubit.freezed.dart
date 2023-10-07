@@ -19,38 +19,50 @@ mixin _$BlogHomeScreenState<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() error,
     required TResult Function(T data) data,
+    required TResult Function() apiError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? error,
     TResult? Function(T data)? data,
+    TResult? Function()? apiError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? error,
     TResult Function(T data)? data,
+    TResult Function()? apiError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_error<T> value) error,
     required TResult Function(_Data<T> value) data,
+    required TResult Function(_apiError<T> value) apiError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_error<T> value)? error,
     TResult? Function(_Data<T> value)? data,
+    TResult? Function(_apiError<T> value)? apiError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
+    TResult Function(_error<T> value)? error,
     TResult Function(_Data<T> value)? data,
+    TResult Function(_apiError<T> value)? apiError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,7 +126,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() error,
     required TResult Function(T data) data,
+    required TResult Function() apiError,
   }) {
     return initial();
   }
@@ -123,7 +137,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? error,
     TResult? Function(T data)? data,
+    TResult? Function()? apiError,
   }) {
     return initial?.call();
   }
@@ -132,7 +148,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? error,
     TResult Function(T data)? data,
+    TResult Function()? apiError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -145,7 +163,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_error<T> value) error,
     required TResult Function(_Data<T> value) data,
+    required TResult Function(_apiError<T> value) apiError,
   }) {
     return initial(this);
   }
@@ -154,7 +174,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_error<T> value)? error,
     TResult? Function(_Data<T> value)? data,
+    TResult? Function(_apiError<T> value)? apiError,
   }) {
     return initial?.call(this);
   }
@@ -163,7 +185,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
+    TResult Function(_error<T> value)? error,
     TResult Function(_Data<T> value)? data,
+    TResult Function(_apiError<T> value)? apiError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -175,6 +199,120 @@ class _$InitialImpl<T> implements _Initial<T> {
 
 abstract class _Initial<T> implements BlogHomeScreenState<T> {
   const factory _Initial() = _$InitialImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$errorImplCopyWith<T, $Res> {
+  factory _$$errorImplCopyWith(
+          _$errorImpl<T> value, $Res Function(_$errorImpl<T>) then) =
+      __$$errorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$errorImplCopyWithImpl<T, $Res>
+    extends _$BlogHomeScreenStateCopyWithImpl<T, $Res, _$errorImpl<T>>
+    implements _$$errorImplCopyWith<T, $Res> {
+  __$$errorImplCopyWithImpl(
+      _$errorImpl<T> _value, $Res Function(_$errorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$errorImpl<T> implements _error<T> {
+  const _$errorImpl();
+
+  @override
+  String toString() {
+    return 'BlogHomeScreenState<$T>.error()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$errorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() error,
+    required TResult Function(T data) data,
+    required TResult Function() apiError,
+  }) {
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? error,
+    TResult? Function(T data)? data,
+    TResult? Function()? apiError,
+  }) {
+    return error?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? error,
+    TResult Function(T data)? data,
+    TResult Function()? apiError,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_error<T> value) error,
+    required TResult Function(_Data<T> value) data,
+    required TResult Function(_apiError<T> value) apiError,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_error<T> value)? error,
+    TResult? Function(_Data<T> value)? data,
+    TResult? Function(_apiError<T> value)? apiError,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(_error<T> value)? error,
+    TResult Function(_Data<T> value)? data,
+    TResult Function(_apiError<T> value)? apiError,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _error<T> implements BlogHomeScreenState<T> {
+  const factory _error() = _$errorImpl<T>;
 }
 
 /// @nodoc
@@ -243,7 +381,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() error,
     required TResult Function(T data) data,
+    required TResult Function() apiError,
   }) {
     return data(this.data);
   }
@@ -252,7 +392,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? error,
     TResult? Function(T data)? data,
+    TResult? Function()? apiError,
   }) {
     return data?.call(this.data);
   }
@@ -261,7 +403,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? error,
     TResult Function(T data)? data,
+    TResult Function()? apiError,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -274,7 +418,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_error<T> value) error,
     required TResult Function(_Data<T> value) data,
+    required TResult Function(_apiError<T> value) apiError,
   }) {
     return data(this);
   }
@@ -283,7 +429,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_error<T> value)? error,
     TResult? Function(_Data<T> value)? data,
+    TResult? Function(_apiError<T> value)? apiError,
   }) {
     return data?.call(this);
   }
@@ -292,7 +440,9 @@ class _$DataImpl<T> implements _Data<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
+    TResult Function(_error<T> value)? error,
     TResult Function(_Data<T> value)? data,
+    TResult Function(_apiError<T> value)? apiError,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -309,4 +459,118 @@ abstract class _Data<T> implements BlogHomeScreenState<T> {
   @JsonKey(ignore: true)
   _$$DataImplCopyWith<T, _$DataImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$apiErrorImplCopyWith<T, $Res> {
+  factory _$$apiErrorImplCopyWith(
+          _$apiErrorImpl<T> value, $Res Function(_$apiErrorImpl<T>) then) =
+      __$$apiErrorImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$apiErrorImplCopyWithImpl<T, $Res>
+    extends _$BlogHomeScreenStateCopyWithImpl<T, $Res, _$apiErrorImpl<T>>
+    implements _$$apiErrorImplCopyWith<T, $Res> {
+  __$$apiErrorImplCopyWithImpl(
+      _$apiErrorImpl<T> _value, $Res Function(_$apiErrorImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$apiErrorImpl<T> implements _apiError<T> {
+  const _$apiErrorImpl();
+
+  @override
+  String toString() {
+    return 'BlogHomeScreenState<$T>.apiError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$apiErrorImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() error,
+    required TResult Function(T data) data,
+    required TResult Function() apiError,
+  }) {
+    return apiError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? error,
+    TResult? Function(T data)? data,
+    TResult? Function()? apiError,
+  }) {
+    return apiError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? error,
+    TResult Function(T data)? data,
+    TResult Function()? apiError,
+    required TResult orElse(),
+  }) {
+    if (apiError != null) {
+      return apiError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_error<T> value) error,
+    required TResult Function(_Data<T> value) data,
+    required TResult Function(_apiError<T> value) apiError,
+  }) {
+    return apiError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_error<T> value)? error,
+    TResult? Function(_Data<T> value)? data,
+    TResult? Function(_apiError<T> value)? apiError,
+  }) {
+    return apiError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(_error<T> value)? error,
+    TResult Function(_Data<T> value)? data,
+    TResult Function(_apiError<T> value)? apiError,
+    required TResult orElse(),
+  }) {
+    if (apiError != null) {
+      return apiError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _apiError<T> implements BlogHomeScreenState<T> {
+  const factory _apiError() = _$apiErrorImpl<T>;
 }

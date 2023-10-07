@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'favourites_cubit.dart';
+part of 'blog_home_screen_server_error_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$FavouritesState<T> {
+mixin _$BlogHomeScreenServerErrorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -34,33 +34,36 @@ mixin _$FavouritesState<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_Initial value) initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_Initial value)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
+    TResult Function(_Initial value)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FavouritesStateCopyWith<T, $Res> {
-  factory $FavouritesStateCopyWith(
-          FavouritesState<T> value, $Res Function(FavouritesState<T>) then) =
-      _$FavouritesStateCopyWithImpl<T, $Res, FavouritesState<T>>;
+abstract class $BlogHomeScreenServerErrorStateCopyWith<$Res> {
+  factory $BlogHomeScreenServerErrorStateCopyWith(
+          BlogHomeScreenServerErrorState value,
+          $Res Function(BlogHomeScreenServerErrorState) then) =
+      _$BlogHomeScreenServerErrorStateCopyWithImpl<$Res,
+          BlogHomeScreenServerErrorState>;
 }
 
 /// @nodoc
-class _$FavouritesStateCopyWithImpl<T, $Res, $Val extends FavouritesState<T>>
-    implements $FavouritesStateCopyWith<T, $Res> {
-  _$FavouritesStateCopyWithImpl(this._value, this._then);
+class _$BlogHomeScreenServerErrorStateCopyWithImpl<$Res,
+        $Val extends BlogHomeScreenServerErrorState>
+    implements $BlogHomeScreenServerErrorStateCopyWith<$Res> {
+  _$BlogHomeScreenServerErrorStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -69,35 +72,35 @@ class _$FavouritesStateCopyWithImpl<T, $Res, $Val extends FavouritesState<T>>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<T, $Res> {
+abstract class _$$InitialImplCopyWith<$Res> {
   factory _$$InitialImplCopyWith(
-          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
-      __$$InitialImplCopyWithImpl<T, $Res>;
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<T, $Res>
-    extends _$FavouritesStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
-    implements _$$InitialImplCopyWith<T, $Res> {
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$BlogHomeScreenServerErrorStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
-      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialImpl<T> implements _Initial<T> {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
   String toString() {
-    return 'FavouritesState<$T>.initial()';
+    return 'BlogHomeScreenServerErrorState.initial()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -134,7 +137,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(_Initial value) initial,
   }) {
     return initial(this);
   }
@@ -142,7 +145,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(_Initial value)? initial,
   }) {
     return initial?.call(this);
   }
@@ -150,7 +153,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
+    TResult Function(_Initial value)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -160,6 +163,6 @@ class _$InitialImpl<T> implements _Initial<T> {
   }
 }
 
-abstract class _Initial<T> implements FavouritesState<T> {
-  const factory _Initial() = _$InitialImpl<T>;
+abstract class _Initial implements BlogHomeScreenServerErrorState {
+  const factory _Initial() = _$InitialImpl;
 }

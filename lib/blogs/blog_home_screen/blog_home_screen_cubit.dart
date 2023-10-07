@@ -10,10 +10,10 @@ part 'blog_home_screen_state.dart';
 part 'blog_home_screen_cubit.freezed.dart';
 
 class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
-  BlogHomeScreenCubit() : super(BlogHomeScreenState.initial());
+  BlogHomeScreenCubit() : super(const BlogHomeScreenState.initial());
 
   Future<void> fetchData() async {
-    final String adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
+    const String adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
     try {
       final response = await http.get(
           Uri.parse('https://intent-kit-16.hasura.app/api/rest/blogs'),
@@ -32,15 +32,16 @@ class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
         }).toList();
         emit(BlogHomeScreenState.data(blogs));
       } else {
+        emit(const BlogHomeScreenState.apiError());
         // Handle error here if needed
       }
     } catch (e) {
-      throw UnimplementedError("");
+      emit(const BlogHomeScreenState.error());
       // Handle error here if needed
     }
   }
 
-  void toggleLike(String postId) {
+  void addFavourite(String postId) {
     final initialState = state;
     if (initialState is _Data<List<Blogs>>) {
       final likedBlogs = initialState.data
@@ -52,13 +53,13 @@ class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
     }
   }
 
-  // void toggleFavorite(Blogs fav) {
-  //   final updatedFavorites = [...state.data];
-  //   if (updatedFavorites.contains(item)) {
-  //     updatedFavorites.remove(item);
-  //   } else {
-  //     updatedFavorites.add(item);
-  //   }
-  //   emit(state.copyWith(favorites: updatedFavorites));
-  // }
+// void toggleFavorite(Blogs fav) {
+//   final updatedFavorites = [...state.data];
+//   if (updatedFavorites.contains(item)) {
+//     updatedFavorites.remove(item);
+//   } else {
+//     updatedFavorites.add(item);
+//   }
+//   emit(state.copyWith(favorites: updatedFavorites));
+// }
 }

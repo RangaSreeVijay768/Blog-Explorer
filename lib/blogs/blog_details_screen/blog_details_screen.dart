@@ -39,7 +39,7 @@ class BlogDetailsScreen extends BaseStatelessWidget<BlogHomeScreenController, Bl
                                 width: 2,
                                 gradient: LinearGradient(colors: [
                                   AppColors.primary,
-                                  AppColors.coinProgress,
+                                  AppColors.yellow,
                                   AppColors.textRed
                                 ])
                             )
@@ -64,7 +64,7 @@ class BlogDetailsScreen extends BaseStatelessWidget<BlogHomeScreenController, Bl
                               alignment: Alignment.center,
                               child: Text(title,
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: AppColors.white,
                                     fontSize: Fonts.fontSize22,
                                     fontWeight: Fonts.f500
@@ -82,7 +82,7 @@ class BlogDetailsScreen extends BaseStatelessWidget<BlogHomeScreenController, Bl
 
                       Row(
                         children: [
-                          SizedBox(width: 20,),
+                          const SizedBox(width: 20,),
                           Expanded(
                               child: Container(
                                 margin: edge_insets_y_4,

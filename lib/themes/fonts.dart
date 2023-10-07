@@ -1,8 +1,6 @@
 import 'dart:ui';
 
 abstract class Fonts {
-  static const fontNunito = 'Nunito';
-
   static const fontSize11 = 11.0;
   static const fontSize12 = 12.0;
   static const fontSize14 = 14.0;
@@ -11,6 +9,7 @@ abstract class Fonts {
   static const fontSize20 = 20.0;
   static const fontSize22 = 22.0;
   static const fontSize24 = 24.0;
+  static const fontSize26 = 26.0;
   static const fontSize32 = 32.0;
   static const fontSize48 = 48.0;
 
