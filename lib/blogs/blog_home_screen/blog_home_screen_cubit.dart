@@ -31,7 +31,8 @@ class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
           );
         }).toList();
         emit(BlogHomeScreenState.data(blogs));
-      } else {
+      }
+      else {
         emit(const BlogHomeScreenState.apiError());
         // Handle error here if needed
       }

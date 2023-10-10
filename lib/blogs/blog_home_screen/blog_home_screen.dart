@@ -1,6 +1,7 @@
 import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_initial/blog_home_screen_initial.dart';
 import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_internet_error/blog_home_screen_internet_error.dart';
 import 'package:blog_explorer/blogs/blog_home_screen/blog_home_screen_server_error/blog_home_screen_server_error.dart';
+import 'package:blog_explorer/weather/weather.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -61,9 +62,9 @@ class BlogHomeScreen extends BaseStatelessWidget<BlogHomeScreenController, BlogH
                         fit: BoxFit.fill)),
                 child: Center(
                   child: state.when(
-                      initial: () => BlogHomeScreenInitial(),
-                      error: () => BlogHomeScreenInternetError(),
-                      apiError: () => BlogHomeScreenServerError(),
+                      initial: () => const BlogHomeScreenInitial(),
+                      error: () => const BlogHomeScreenInternetError(),
+                      apiError: () => const BlogHomeScreenServerError(),
                       data: (blogs) => ListView.builder(
                         itemCount: blogs.length,
                         itemBuilder: (context, index) {
@@ -152,7 +153,7 @@ class BlogHomeScreen extends BaseStatelessWidget<BlogHomeScreenController, BlogH
                                                   if (context.mounted) {
                                                     ScaffoldMessenger.of(context).showSnackBar(
                                                       SnackBar(
-                                                        duration: Duration(milliseconds: 800),
+                                                        duration: const Duration(milliseconds: 800),
                                                           content: Text(
                                                         blog.favourite ? 'Removed from favourites'
                                                             : 'Successfully added to favourites',
@@ -184,19 +185,15 @@ class BlogHomeScreen extends BaseStatelessWidget<BlogHomeScreenController, BlogH
                                                         borderRadius
                                                             .br_30)),
                                                 onPressed: () {
-                                                  // Navigator.of(context).push(
-                                                  //     MaterialPageRoute(builder: (context) => BlogDetailsScreen(
-                                                  //         id: post.id,
-                                                  //         title: post.title,
-                                                  //         image: post.image_url
-                                                  //     )));
+                                                  Navigator.of(context).push(
+                                                      MaterialPageRoute(builder: (context) => MyApp5()));
                                                 },
                                                 child: const Icon(
                                                     Icons.share),
                                               )),
                                         ],
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 30,
                                       ),
                                     ],

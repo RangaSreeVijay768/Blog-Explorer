@@ -50,6 +50,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.3.3
   connectivity_plus: ^4.0.2
+  weather: ^3.1.1
 
 dev_dependencies:
   flutter_test:
