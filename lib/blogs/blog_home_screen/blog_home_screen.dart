@@ -138,61 +138,61 @@ class BlogHomeScreen extends BaseStatelessWidget<BlogHomeScreenController, BlogH
                                         height: 10,
                                       ),
                                       // Text(post.id,style: const TextStyle(color: AppColors.grey4),),
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                              child: TextButton(
-                                                style: TextButton.styleFrom(
-                                                    backgroundColor: blog.favourite? AppColors.bgLightBlue: AppColors.white,
-                                                    padding: edge_insets_y_16,
-                                                    shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                        borderRadius
-                                                            .br_30)),
-                                                onPressed: () {
-                                                  if (context.mounted) {
-                                                    ScaffoldMessenger.of(context).showSnackBar(
-                                                      SnackBar(
-                                                        duration: const Duration(milliseconds: 800),
-                                                          content: Text(
-                                                        blog.favourite ? 'Removed from favourites'
-                                                            : 'Successfully added to favourites',
-                                                        // style: TextStyle(color: AppColors.white),
-                                                      )),
-                                                    );
-                                                  }
-                                                  getCubit(context).toggleLike(blog.id);
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: TextButton(
+                                                  style: TextButton.styleFrom(
+                                                      backgroundColor: blog.favourite? AppColors.bgLightBlue: AppColors.white,
+                                                      padding: edge_insets_y_16,
+                                                      shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                          borderRadius
+                                                              .br_30)),
+                                                  onPressed: () {
+                                                    if (context.mounted) {
+                                                      ScaffoldMessenger.of(context).showSnackBar(
+                                                        SnackBar(
+                                                          duration: const Duration(milliseconds: 800),
+                                                            content: Text(
+                                                          blog.favourite ? 'Removed from favourites'
+                                                              : 'Successfully added to favourites',
+                                                          // style: TextStyle(color: AppColors.white),
+                                                        )),
+                                                      );
+                                                    }
+                                                    getCubit(context).toggleLike(blog.id);
 
-                                                },
-                                                child: Icon(
-                                                  blog.favourite ? Icons.favorite : Icons.favorite_border,
-                                                  color: blog.favourite? AppColors.textRed: AppColors.bgPrimary,
-                                                ),
-                                              )
-                                          ),
-                                          const SizedBox(
-                                            width: 30,
-                                          ),
-                                          Expanded(
-                                              child: TextButton(
-                                                style: TextButton.styleFrom(
-                                                    backgroundColor:
-                                                    AppColors.white,
-                                                    padding:
-                                                    edge_insets_y_16,
-                                                    shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                        borderRadius
-                                                            .br_30)),
-                                                onPressed: () {
-                                                  Navigator.of(context).push(
-                                                      MaterialPageRoute(builder: (context) => MyApp5()));
-                                                },
-                                                child: const Icon(
-                                                    Icons.share),
-                                              )),
-                                        ],
-                                      ),
+                                                  },
+                                                  child: Icon(
+                                                    blog.favourite ? Icons.favorite : Icons.favorite_border,
+                                                    color: blog.favourite? AppColors.textRed: AppColors.bgPrimary,
+                                                  ),
+                                                )
+                                            ),
+                                            const SizedBox(
+                                              width: 30,
+                                            ),
+                                            Expanded(
+                                                child: TextButton(
+                                                  style: TextButton.styleFrom(
+                                                      backgroundColor:
+                                                      AppColors.white,
+                                                      padding:
+                                                      edge_insets_y_16,
+                                                      shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                          borderRadius
+                                                              .br_30)),
+                                                  onPressed: () {
+                                                    Navigator.of(context).push(
+                                                        MaterialPageRoute(builder: (context) => MyApp5()));
+                                                  },
+                                                  child: const Icon(
+                                                      Icons.share),
+                                                )),
+                                          ],
+                                        ),
                                       const SizedBox(
                                         height: 30,
                                       ),

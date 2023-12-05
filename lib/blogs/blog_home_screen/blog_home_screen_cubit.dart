@@ -54,13 +54,4 @@ class BlogHomeScreenCubit extends Cubit<BlogHomeScreenState<List<Blogs>>> {
     }
   }
 
-// void toggleFavorite(Blogs fav) {
-//   final updatedFavorites = [...state.data];
-//   if (updatedFavorites.contains(item)) {
-//     updatedFavorites.remove(item);
-//   } else {
-//     updatedFavorites.add(item);
-//   }
-//   emit(state.copyWith(favorites: updatedFavorites));
-// }
 }
